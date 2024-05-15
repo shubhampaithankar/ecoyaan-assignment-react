@@ -1,0 +1,111 @@
+/* Common styles */
+.navbar {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(10, 12, 13);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.brand {
+    color: rgb(0, 143, 0);
+    font-size: 3rem;
+    margin: 0 2rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 2rem;
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    color: whitesmoke;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    transition: transform .2s;
+}
+
+.active {
+    transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    .menu-icon {
+        display: block;
+        font-size: 2rem;
+        color: whitesmoke;
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 65px;
+        right: -250px;
+        height: 100%;
+        width: 250px;
+        background-color: rgb(10, 12, 13);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        transition: right 0.3s ease;
+    }
+
+    .nav-container.open {
+        right: 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+
+    .nav-item {
+        padding: 0.25rem 2.4rem;
+    }
+
+    .brand-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .active {
+        transform: scale(1.1);
+        border-radius: 12px;
+        background-color: rgb(22, 163, 74);
+    }
+}
+
+@media (min-width: 1001px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-container {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+}

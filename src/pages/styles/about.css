@@ -1,0 +1,182 @@
+.group-section {
+    min-height: 100%;
+    color: whitesmoke;
+}
+
+.section-header {
+    font-size: 2rem;
+}
+
+/* About section */
+.about-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.list {
+    margin: 1rem auto;
+    padding: 0 1.5rem;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.list-item {
+    font-size: 1.25rem;
+    margin: 0.25rem;
+    list-style-image: url("https://ecoyaan.com/images/ecoyaan-logo16x16.png");
+}
+
+.list-item::marker {
+    color: rgb(88, 215, 163);
+}
+
+/* Values section */
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.value-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.value-image-container {
+    text-align: center;
+    margin: 1rem;
+}
+
+.value-image-container > * {
+    object-fit: contain;
+    transition: transform .2s;
+    height: 10rem;
+    width: 10rem;
+}
+
+.value-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.value-header {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 1000px) {
+    .section-header {
+        text-align: center;
+    }
+
+    .value-item {
+        flex-direction: column;
+    }
+
+    .value-text-container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .value-item {
+        width: 100%;
+    }
+}
+
+/* Story section */
+.stories-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.story-item {
+   display: flex; 
+   align-items: center;
+   gap: 5rem;
+}
+
+.story-image-container {
+    text-align: center;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-image-container > * {
+    object-fit: contain;
+    transition: transform .2s;
+    height: 10rem;
+    width: 10rem;
+}
+
+.story {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+@media (max-width: 1000px) {
+    .story-item {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+/* Teams Section */
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.team-image-container {
+    text-align: center;
+    margin: 1rem;
+}
+
+.team-image-container > * {
+    object-fit: contain;
+    transition: transform .2s;
+    height: 10rem;
+    width: 10rem;
+}
+
+.team-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-member-name, .team-member-profile {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+}
+
+.team-member-profile {
+    color: rgb(234, 110, 110)
+}
+
+.team-member-desc {
+    font-size: 1.25rem;
+}

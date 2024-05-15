@@ -1,0 +1,138 @@
+.home-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.slideshow {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+    position: relative;
+    height: 600px;
+}
+
+.slideshow-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-detail-container {
+    position: absolute;
+    margin: 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1rem;
+    color: rgb(20, 20, 20);
+}
+
+.image-detail-container > h3 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.image-detail-container > p {
+    font-size: 1.2rem;
+}
+
+.indicator {
+    display: flex;
+    margin: 0.5rem;
+    justify-content: center;
+}
+
+.dot {
+    background-color: #d3d3d3;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+.dot.active {
+    background-color: #333;
+    transition: .6s ease;
+}
+
+.details-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2.5rem 5rem;
+}
+
+.detail-item {
+    display: inline-flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.detail-text-container {
+    width: 50%;
+    margin: 1rem;
+}
+
+.detail-header {
+    margin: 0.5rem auto;
+    font-weight: bold;
+}
+
+.detail-description {
+    font-size: 1.5rem;
+}
+
+.detail {
+    margin: 2rem auto;
+}
+
+.detail-media-container {
+    width: 50%;
+    text-align: center;
+    margin: 1rem;
+}
+
+.detail-media-container > * {
+    object-fit: contain;
+    transition: transform .2s;
+    height: 20rem;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .details-container {
+        padding: 1.5rem 3rem;
+    }
+
+    .detail-item {
+        flex-direction: column;
+        padding: 0.25rem;
+    }
+
+    .detail-text-container,
+    .detail-media-container {
+        width: 100%;
+    }
+
+    .detail-header {
+        font-size: 1.75rem;
+    }
+
+    .detail {
+        font-size: 1.25rem;
+    }
+
+    .detail-media-container>* {
+        height: 20rem;
+    }
+
+}
